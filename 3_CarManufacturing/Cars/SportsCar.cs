@@ -2,7 +2,7 @@
 
 namespace CarManufacturing.Cars
 {
-    public class SportsCar
+    public class SportsCar : ICar
     {
         private Engine _engine;
         private GearBox _gearBox;
@@ -16,6 +16,21 @@ namespace CarManufacturing.Cars
         public override string ToString()
         {
             return "SportsCar";
+        }
+
+        public void Start()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int Accelerate()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int Decelerate()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

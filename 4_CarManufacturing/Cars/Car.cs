@@ -2,16 +2,16 @@
 
 namespace CarManufacturing.Cars
 {
-    public class FamilyCar : ICar
+    public class Car : ICar
     {
         private readonly IEngine _engine;
         private readonly IGearBox _gearBox;
         private int _speed;
 
-        public FamilyCar()
+        public Car(IEngine engine, IGearBox gearBox)
         {
-            _engine = new Engine(4, FuelType.Diesel);
-            _gearBox = new GearBox(4, true);
+            _engine = engine;
+            _gearBox = gearBox;
         }
 
         public void Start()
@@ -33,7 +33,7 @@ namespace CarManufacturing.Cars
 
         public override string ToString()
         {
-            return "FamilyCar";
+            return "Car";
         }
     }
 }

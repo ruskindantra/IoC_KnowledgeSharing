@@ -42,6 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cars\Car.cs" />
+    <Compile Include="Cars\ICar.cs" />
+    <Compile Include="Components\Engine.cs" />
+    <Compile Include="Components\EngineAlreadyStartedException.cs" />
+    <Compile Include="Components\EngineNotStartedException.cs" />
+    <Compile Include="Components\FuelType.cs" />
+    <Compile Include="Components\GearBox.cs" />
+    <Compile Include="Components\IEngine.cs" />
+    <Compile Include="Components\IGearBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

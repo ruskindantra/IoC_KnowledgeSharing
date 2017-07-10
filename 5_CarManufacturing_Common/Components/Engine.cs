@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CarManufacturing.Components
+namespace CarManufacturing_Common.Components
 {
     public class Engine : IEngine
     {

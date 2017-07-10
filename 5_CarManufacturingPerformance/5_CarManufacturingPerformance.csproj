@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1111667-D5D2-4F20-8318-2ED316ED4B48}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>CarManufacturing</RootNamespace>
-    <AssemblyName>CarManufacturing</AssemblyName>
+    <ProjectGuid>{00DE8DAF-BC84-463A-8539-332AE7302957}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarManufacturingPerformance</RootNamespace>
+    <AssemblyName>CarManufacturingPerformance</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,22 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cars\ICar.cs" />
-    <Compile Include="Components\Engine.cs" />
-    <Compile Include="Cars\FamilyCar.cs" />
-    <Compile Include="Components\EngineAlreadyStartedException.cs" />
-    <Compile Include="Components\EngineNotStartedException.cs" />
-    <Compile Include="Components\FuelType.cs" />
-    <Compile Include="Components\GearBox.cs" />
-    <Compile Include="Cars\NormalCar.cs" />
-    <Compile Include="Components\IEngine.cs" />
-    <Compile Include="Components\IGearBox.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="JetEngine.cs" />
+    <Compile Include="PerformanceModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Cars\SportsCar.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\5_CarManufacturing_Common\5_CarManufacturing_Common.csproj">
+      <Project>{ef72588b-76ec-4d46-ae33-2fccdac0846f}</Project>
+      <Name>5_CarManufacturing_Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

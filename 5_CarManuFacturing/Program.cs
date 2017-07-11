@@ -2,20 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using Autofac;
+using Autofac.Core;
 using Autofac.Features.Indexed;
 using CarManufacturing.Cars;
 using GearBox = CarManufacturing.Components.GearBox;
 using IGearBox = CarManufacturing.Components.IGearBox;
 
 // For Jet engine
-//using Engine = CarManufacturing_Common.Components.Engine;
-//using IEngine = CarManufacturing_Common.Components.IEngine;
-//using FuelType = CarManufacturing_Common.Components.FuelType;
+using Engine = CarManufacturing_Common.Components.Engine;
+using IEngine = CarManufacturing_Common.Components.IEngine;
+using FuelType = CarManufacturing_Common.Components.FuelType;
 
 // For engine
-using Engine = CarManufacturing.Components.Engine;
-using IEngine = CarManufacturing.Components.IEngine;
-using FuelType = CarManufacturing.Components.FuelType;
+//using Engine = CarManufacturing.Components.Engine;
+//using IEngine = CarManufacturing.Components.IEngine;
+//using FuelType = CarManufacturing.Components.FuelType;
 
 namespace CarManufacturing
 {
@@ -23,10 +24,10 @@ namespace CarManufacturing
     {
         static void Main(string[] args)
         {
-            TraditionalRegistration();
+            //TraditionalRegistration();
             //NamedRegistrations();
 
-            //ModuleRegistrations();
+            ModuleRegistrations();
         }
 
         private static void ModuleRegistrations()
